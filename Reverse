@@ -1,0 +1,16 @@
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    Scanner stdin = new Scanner(System.in);
+    int num = stdin.nextInt();
+    ArrayList<Integer> Inputs = new ArrayList<Integer>();
+    for (int i = 0; i < num; i++) {
+        int x = stdin.nextInt();
+        Inputs.add(x);
+    }
+    for (int j = num - 1; j >= 0; j--) {
+      System.out.println(Inputs.get(j));
+    }
+    stdin.nextLine();
+    }
+  }
