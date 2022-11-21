@@ -1,0 +1,18 @@
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+      Scanner stdin = new Scanner(System.in);
+    int word = stdin.nextInt();
+    stdin.nextLine(); // throw away
+    ArrayList<String> Words = new ArrayList<String>();
+    for (int i = 0; i < word; i++) {
+      String x = stdin.nextLine();
+        Words.add(x);
+    //  System.out.println(Words);
+    }
+    for (int j = 0; j < word; j+= 2) {
+      System.out.println(Words.get(j));
+    }
+  //stdin.nextLine();
+  }
+}
