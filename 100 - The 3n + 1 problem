@@ -1,0 +1,32 @@
+// Problem Link: 
+// https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=36
+
+import java.util.*;
+class Main { 
+  public static void main(String[] args) {
+    Scanner stdin = new Scanner (System.in);
+  
+    while(stdin.hasNextLine()) {
+      int i = stdin.nextInt();
+      int j = stdin.nextInt();
+      if(stdin.hasNextLine()) stdin.nextLine();
+
+      int result = 0;
+      int start = Math.min(i,j);
+      int end = Math.max(i,j);
+      for(int n = start; n <= end; n++) {
+        result = Math.max(result, collatz(n));
+      }
+      System.out.println(i + " " + j + " " + result);
+    }
+  }
+  public static int collatz(int n) {
+    int count = 1;
+    while(n != 1) {
+      if(n % 2 == 0) n /= 2;
+      else n = 3*n + 1;
+      count++;
+    }
+    return count;
+  }
+}
